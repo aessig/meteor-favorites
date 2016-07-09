@@ -7,9 +7,9 @@
 </template>
 
 <template name="favoriteButtonFavorited">
-	<a class="btn btn-primary favorite-button" doc="{{_id}}"><i class="fa fa-star"></i> Favorite</a>
+	<a class="favorite-button" doc="{{_id}}"><i class="ui icon star fitted yellow"></i> {{_ "meteor_favorites_label"}}</a>
 </template>
 
 <template name="favoriteButtonNotFavorited">
-	<a class="btn btn-default favorite-button" doc="{{_id}}"><i class="fa fa-star-o"></i> Favorite</a>
+	<a class="favorite-button" doc="{{_id}}"><i class="ui icon empty star fitted"></i> {{_ "meteor_favorites_label"}}</a>
 </template>

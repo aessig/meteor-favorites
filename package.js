@@ -1,52 +1,52 @@
 Package.describe({
+  name: "aessig:meteor-favorites",
   summary: "Adds favoriting/liking functionality to any collection",
-  version: "0.0.4",
-  git: "http://github.com/yogiben/meteor-favorites.git"
+  version: "0.0.1",
+  git: "http://github.com/aessig/meteor-favorites.git",
 });
 
-both = ['client','server']
+Package.onUse(function (api) {
 
-Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.2.1');
+  var both = ["client", "server"];
+
+  api.versionsFrom("1.0");
 
   api.use(
-  	[
-  		'coffeescript',
-  		'less',
-      'templating',
-	    'aldeed:autoform@5.8.1'
+    [
+      "ecmascript",
+      "templating",
+      "aldeed:autoform",
+      "aldeed:collection2",
+    ],
+  both);
 
-  	],
-  	both);
+  api.use("tap:i18n@1.8.0", both);
+  api.imply("tap:i18n");
+
+  api.add_files([
+      "i18n/en.i18n.json",
+      "i18n/fr.i18n.json",
+    ], both);
 
   api.addFiles(
-  	[
-  		'lib/both/schemas.coffee',
-  		'lib/both/collections.coffee'
-  	],
-  	both)
+    [
+      "lib/both/schemas.js",
+      "lib/both/collections.js",
+    ], both);
 
-   api.addFiles(
-  	[
-  		'lib/client/templates.html',
-      'lib/client/templates.coffee',
-  		'lib/client/helpers.coffee'
-  	],
-  	'client')
+  api.addFiles(
+    [
+      "lib/client/templates.html",
+      "lib/client/templates.js",
+      "lib/client/helpers.js",
+    ],
+    "client");
 
-   api.addFiles(
-  	[
-  		'lib/server/allow.coffee',
-  		'lib/server/publish.coffee'
-  	],
-  	'server')
+  api.addFiles(
+    [
+      "lib/server/allow.js",
+      "lib/server/publish.js",
+    ],
+    "server");
 
-
-
-});
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('yogiben:favorites');
-  api.addFiles('yogiben:favorites-tests.js');
 });

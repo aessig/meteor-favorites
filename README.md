@@ -1,8 +1,15 @@
 Favouriting made easy
 ================
-This is my fork of yogibens:meteor-favorites. Updated version numbers and changed the button template to simply the "Star" icon.
+This is my fork of patrickbolle:meteor-favorites (Updated version numbers and changed the button template to simply the "Star" icon)
 
-`meteor add patrickbolle:meteor-favorites`
+Updated version numbers
+
+* adapted for meteor 1.3
+* added tap:i18n package and translate for word "favorite" (en, fr, de, it, more to come)
+* change template to use semantic ui instead of bootstrap
+* added a color to the star (yellow)
+
+`meteor add aessig:meteor-favorites`
 
 [See a demo](http://yogiben-favorites.meteor.com/dashboard)
 
