@@ -13,10 +13,10 @@ Package.onUse(function (api) {
 
   api.use(
     [
-      "ecmascript",
+      "ecmascript@0.4.7",
       "templating",
-      "aldeed:autoform",
-      "aldeed:collection2",
+      "aldeed:autoform@5.8.1",
+      "aldeed:collection2@2.9.1",
     ],
   both);
 
