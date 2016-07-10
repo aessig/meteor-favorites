@@ -1,7 +1,7 @@
 Package.describe({
   name: "aessig:meteor-favorites",
   summary: "Adds favoriting/liking functionality to any collection",
-  version: "0.0.2",
+  version: "0.0.4",
   git: "http://github.com/aessig/meteor-favorites.git",
 });
 
